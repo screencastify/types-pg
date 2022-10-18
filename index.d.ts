@@ -204,7 +204,7 @@ export class Pool extends events.EventEmitter {
     ): void;
     // tslint:enable:no-unnecessary-generics
 
-    on(event: 'error', listener: (err: Error, client: PoolClient) => void): this;
+    on(event: 'error' | 'release', listener: (err: Error, client: PoolClient) => void): this;
     on(event: 'connect' | 'acquire' | 'remove', listener: (client: PoolClient) => void): this;
 }
 
